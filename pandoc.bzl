@@ -48,6 +48,7 @@ FORMAT_EXTENSIONS = {
     "textile": "textile",
     "zimwiki": "txt",
 }
+PANDOC_FORMATS = FORMAT_EXTENSIONS.keys()
 
 def _pandoc_impl(ctx):
     toolchain = ctx.toolchains["@bazel_pandoc//:pandoc_toolchain_type"]
