@@ -3,7 +3,7 @@ container:
 task:
   build_script:
   - bazel --bazelrc=.cirrus.bazelrc build --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST //samples/...
-#  bazel test //... fails if there is no test defined
-#  test_script:
-#  - bazel --bazelrc=.cirrus.bazelrc test --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST //...
+# bazel test //... fails if there is no test defined
+  test_script:
+  - bazel --bazelrc=.cirrus.bazelrc test --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST //...
 
