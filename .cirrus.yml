@@ -1,5 +1,5 @@
 container:
-    image: l.gcr.io/google/bazel:latest
+    image: l.gcr.io/google/bazel:1.2.1
 task:
     name: Main build
     build_script: bazel build //...
