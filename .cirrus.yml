@@ -14,3 +14,16 @@ task:
     windows_container:
         image: cirrusci/windowsservercore:2019
         os_version: 2019
+    steps:
+    - restore_cache:
+      keys:
+      - chocho-{{ .Branch }}-{{ .Revision }}
+      - chocho-{{ .Branch }}-
+      - chocho--
+      - chocho-
+    - checkout
+    - git_cache:
+      key: chocho-{{ .Branch }}-{{ .Revision }}
+      paths:
+      - "C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\chocolatey"
+
